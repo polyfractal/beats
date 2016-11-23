@@ -1,4 +1,4 @@
-// +build mips
+// +build mips64
 
 package system
 
