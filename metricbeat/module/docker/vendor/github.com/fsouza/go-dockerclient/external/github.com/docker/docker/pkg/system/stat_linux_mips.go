@@ -1,4 +1,4 @@
-// +build !mips
+// +build mips
 
 package system
 
@@ -12,7 +12,7 @@ func fromStatT(s *syscall.Stat_t) (*StatT, error) {
 		mode: s.Mode,
 		uid:  s.Uid,
 		gid:  s.Gid,
-		rdev: s.Rdev,
+		rdev: uint64(s.Rdev),
 		mtim: s.Mtim}, nil
 }
 
